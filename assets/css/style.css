@@ -5,6 +5,10 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+body{
+    background-color: #EEE;
+    color: #051923;
+}
 body, button, input{
     font-family: 'Poppins', sans-serif;
 }
@@ -15,6 +19,12 @@ body, button, input{
 }
 .d-nav-bar{
     padding: 32px 0;
+    background-color: #EEE0;
+    box-shadow: 16px 16px 32px #05192300;
+}
+.d-nav-bar-active{
+    background-color: #EEE;
+    box-shadow: 16px 16px 32px #05192310;
 }
 .d-main-width{
     width: 90%;
@@ -157,4 +167,16 @@ body, button, input{
     75%{
         bottom: 42px;
     }
+}
+
+.d-video-wrap{
+   width: 100%;
+   padding-top: 60%;
+   border-radius: 8px;
+   background-color: #9eb3c2;
+}
+.d-video-placeholder{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

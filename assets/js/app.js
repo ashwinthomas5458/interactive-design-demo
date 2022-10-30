@@ -1,3 +1,11 @@
+const navbarActive=()=>{
+    var screenposition=window.innerHeight/3;
+    const navbar=document.querySelector('.d-nav-bar');
+
+    if(window.pageYOffset<screenposition) navbar.classList.remove('d-nav-bar-active');
+    else if(window.pageYOffset>screenposition) navbar.classList.add('d-nav-bar-active');
+}
+
 const coverBallAnime=()=>{
     const animeWrapper = document.querySelector(".d-ball-anime-wrap");
     const animeBall = document.querySelector(".d-ball-sm");
@@ -47,4 +55,17 @@ const coverBallAnime=()=>{
     });
 }
 
-coverBallAnime();
+const scrollListeners = ()=>{
+    window.addEventListener("scroll", ()=>{
+        navbarActive();
+    });
+}
+
+const loadListener=()=>{
+    window.addEventListener("load", ()=>{
+        coverBallAnime();
+        scrollListeners();
+    });
+}
+
+loadListener();
